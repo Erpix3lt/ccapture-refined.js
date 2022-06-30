@@ -1,7 +1,7 @@
 {
-  "name": "ccapture.js",
+  "name": "@erpix3lt/ccapture.js",
   "version": "1.0.8",
-  "description": "A library to capture canvas-based animations at a fixed framerate",
+  "description": "A library to capture canvas-based animations at a fixed framerate, with the additional function of returning transparent GIFS",
   "main": "src/CCapture.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
