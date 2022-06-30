@@ -518,7 +518,7 @@ function CCGIFEncoder( settings ) {
 		workers: settings.workers,
 		quality: settings.quality,
 		workerScript: settings.workersPath + 'gif.worker.js',
-		transparent: 0x000000
+		transparent: settings.colorToIgnor
 	} );
 
     this.encoder.on( 'progress', function( progress ) {
@@ -581,6 +581,7 @@ function CCapture( settings ) {
 		_performanceStartTime,
 		_step,
         _encoder,
+		_colorToIgnor,
 		_timeouts = [],
 		_intervals = [],
 		_frameCount = 0,
