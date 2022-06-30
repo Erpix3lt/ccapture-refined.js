@@ -31,8 +31,8 @@
 	function pad(num, bytes, base) {
 		num = num.toString(base || 8);
 		return "000000000000".substr(num.length + 12 - bytes) + num;
-	}	
-	
+	}
+
 	function stringToUint8 (input, out, offset) {
 		var i, length;
 
@@ -88,7 +88,7 @@
 
 (function () {
 	"use strict";
-	
+
 /*
 struct posix_header {             // byte offset
 	char name[100];               //   0
@@ -113,7 +113,7 @@ struct posix_header {             // byte offset
 
 	var utils = window.utils,
 		headerFormat;
-	
+
 	headerFormat = [
 		{
 			'field': 'fileName',
@@ -202,7 +202,7 @@ struct posix_header {             // byte offset
 		}
 		return buffer;
 	}
-	
+
 	window.header = {}
 	window.header.structure = headerFormat;
 	window.header.format = formatHeader;
@@ -215,7 +215,7 @@ struct posix_header {             // byte offset
 		utils = window.utils,
 		recordSize = 512,
 		blockSize;
-	
+
 	function Tar(recordsPerBlock) {
 		this.written = 0;
 		blockSize = (recordsPerBlock || 20) * recordSize;
@@ -279,7 +279,7 @@ struct posix_header {             // byte offset
 
 		headerArr = header.format(data);
 
-		var headerLength = Math.ceil( headerArr.length / recordSize ) * recordSize; 
+		var headerLength = Math.ceil( headerArr.length / recordSize ) * recordSize;
 		var inputLength = Math.ceil( input.length / recordSize ) * recordSize;
 
 		this.blocks.push( { header: headerArr, input: input, headerLength: headerLength, inputLength: inputLength } );
@@ -322,7 +322,7 @@ struct posix_header {             // byte offset
 		buffers.push( new Uint8Array( 2 * recordSize ) );
 
 		return new Blob( buffers, { type: 'octet/stream' } );
-		
+
 	};
 
 	Tar.prototype.clear = function () {
@@ -330,5 +330,9 @@ struct posix_header {             // byte offset
 		this.out = utils.clean(blockSize);
 	};
 
-	window.Tar = Tar;
+  if (typeof module !== 'undefined' && typeof module.exports !== 'undefined') {
+    module.exports = Tar;
+  } else {
+    window.Tar = Tar;
+  }
 }());

@@ -1,8 +1,8 @@
 {
-  "name": "ccapture.js",
-  "version": "1.0.9",
+  "name": "@sparkol/ccapture.js",
+  "version": "1.0.8",
   "description": "A library to capture canvas-based animations at a fixed framerate",
-  "main": "build/CCapture.all.min.js",
+  "main": "src/CCapture.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -21,5 +21,8 @@
   "bugs": {
     "url": "https://github.com/spite/ccapture.js/issues"
   },
-  "homepage": "https://github.com/spite/ccapture.js#readme"
+  "homepage": "https://github.com/spite/ccapture.js#readme",
+  "directories": {
+    "example": "examples"
+  }
 }
