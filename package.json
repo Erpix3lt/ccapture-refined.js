@@ -1,5 +1,5 @@
 {
-  "name": "@sparkol/ccapture.js",
+  "name": "ccapture.js",
   "version": "1.0.8",
   "description": "A library to capture canvas-based animations at a fixed framerate",
   "main": "src/CCapture.js",
