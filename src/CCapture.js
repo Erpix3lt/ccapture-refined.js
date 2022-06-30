@@ -527,7 +527,8 @@ function CCGIFEncoder( settings ) {
   	this.encoder = new GIF({
 		workers: settings.workers,
 		quality: settings.quality,
-		workerScript: settings.workersPath + 'gif.worker.js'
+		workerScript: settings.workersPath + 'gif.worker.js',
+		transparent: 0x000000
 	} );
 
     this.encoder.on( 'progress', function( progress ) {
