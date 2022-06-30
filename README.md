@@ -1,16 +1,22 @@
 # CCapture.js - A library to capture canvas-based animations
 CCapture.js is a library to help capturing animations created with HTML5 `canvas` at a fixed framerate. 
 
-- [What is CCapture.js and why would I need it?](#what-is-ccapturejs-and-why-would-i-need-it)
-- [Using the code](#using-the-code)
-- [Limitations](#limitations)
-- [Gallery](#gallery)
-- [Credits](#credits)
-- [License](#license)
+- [CCapture.js - A library to capture canvas-based animations](#ccapturejs---a-library-to-capture-canvas-based-animations)
+			- [What is different about this fork?](#what-is-different-about-this-fork)
+			- [What is CCapture.js and why would I need it?](#what-is-ccapturejs-and-why-would-i-need-it)
+			- [Using the code](#using-the-code)
+			- [Limitations](#limitations)
+			- [Gallery](#gallery)
+			- [Credits](#credits)
+			- [Contributors](#contributors)
+			- [License](#license)
 
 An example is probably worth a lot of words: [CCapture.js with Game of Life 3D](http://www.clicktorelease.com/code/conway3d_ccapture/).
 
 ![Sample](https://raw.githubusercontent.com/spite/ccapture.js/master/assets/sample.gif)
+
+#### What is different about this fork? #####
+This fork is a fixed version of the npm package by 'spike'. It also exports transparent gifs. Everything colored pure black -> '0x000000' will be translated as transparent.
 
 #### What is CCapture.js and why would I need it? ####
 
