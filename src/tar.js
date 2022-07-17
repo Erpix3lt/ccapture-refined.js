@@ -78,12 +78,18 @@
 		return output;
 	}
 
-	window.utils = {}
-	window.utils.clean = clean;
-	window.utils.pad = pad;
-	window.utils.extend = extend;
-	window.utils.stringToUint8 = stringToUint8;
-	window.utils.uint8ToBase64 = uint8ToBase64;
+	try{
+		window.utils = {}
+		window.utils.clean = clean;
+		window.utils.pad = pad;
+		window.utils.extend = extend;
+		window.utils.stringToUint8 = stringToUint8;
+		window.utils.uint8ToBase64 = uint8ToBase64;
+	} catch(error){
+		//this prevents a common svelte kit ssr error
+		console.log(error)
+	}
+	
 }());
 
 (function () {
