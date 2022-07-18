@@ -921,7 +921,10 @@ function CCapture( settings ) {
 				return false;
 			}
 		}
-		if(_encoder == _encoder.CCGIFEncoder){
+		if( _settings.format == 'gif' ){
+			_log( 'true format'  );
+		}
+		if(_encoder == _encoders.CCGIFEncoder){
 			_log( 'true'  );
 		}
 		_log( 'saving' );
