@@ -916,12 +916,15 @@ function CCapture( settings ) {
 				_log( 'Downloading' );
 				download( blob, _encoder.filename + _encoder.extension, _encoder.mimeType );
 				
-				_log( 'aborting'+ String(_encoder)  );
+				_log( 'aborting' );
 				_encoder.destroy( );
 				return false;
 			}
 		}
-		_log( 'saving' + _encoder );
+		if(_encoder == _encoder.CCGIFEncoder){
+			_log( 'true'  );
+		}
+		_log( 'saving' );
 		_encoder.save( callback );
 	}
 
