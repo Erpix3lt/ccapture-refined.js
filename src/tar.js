@@ -78,18 +78,12 @@
 		return output;
 	}
 
-
-		window.utils = {}
-		window.utils.clean = clean;
-		window.utils.pad = pad;
-		window.utils.extend = extend;
-		window.utils.stringToUint8 = stringToUint8;
-		window.utils.uint8ToBase64 = uint8ToBase64;
-
-		//this prevents a common svelte kit ssr error
-		console.log(error)
-
-	
+	window.utils = {}
+	window.utils.clean = clean;
+	window.utils.pad = pad;
+	window.utils.extend = extend;
+	window.utils.stringToUint8 = stringToUint8;
+	window.utils.uint8ToBase64 = uint8ToBase64;
 }());
 
 (function () {
