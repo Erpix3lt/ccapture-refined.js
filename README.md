@@ -18,6 +18,7 @@ An example is probably worth a lot of words: [CCapture.js with Game of Life 3D](
 
 #### What is different about this fork? #####
 This fork is a fixed version of the npm package by 'spike'. It also exports transparent gifs. Everything colored pure black -> '0x000000' will be translated as transparent. You can edit the standard color (to be ingored), by passing `colorToIgnor: 0xffffff` into your CCapture Instance.
+You can also download gifs multiple times, without refreshing. Adding an abort function was necessary.
 
 #### How to include this fork as an npm package? ####
 Simply execute `npm install https://github.com/Erpix3lt/fixed-transparent-ccapture.js` in the root directory of your project.
