@@ -915,7 +915,7 @@ function CCapture( settings ) {
 			callback = function( blob ) {
 				_log( 'Downloading' );
 				download( blob, _encoder.filename + _encoder.extension, _encoder.mimeType );
-				_log( 'aborting' );
+				_log( 'aborting', _encoder );
 				_encoder.destroy( );
 				return false;
 			}
