@@ -922,7 +922,6 @@ function CCapture( settings ) {
 			}
 		}
 		_encoder.save( callback );
-		_encoder.destroy( callback );
 	}
 
 	function _log( message ) {
