@@ -567,8 +567,13 @@ CCGIFEncoder.prototype.save = function( callback ) {
     this.callback = callback;
 
 	this.encoder.render();
-	this.encoder.abort();
+}
 
+CCGIFEncoder.prototype.destroy = function( callback ) {
+
+    this.callback = callback;
+
+	this.encoder.abort();
 }
 
 function CCapture( settings ) {
@@ -917,7 +922,7 @@ function CCapture( settings ) {
 			}
 		}
 		_encoder.save( callback );
-
+		_encoder.destroy( callback );
 	}
 
 	function _log( message ) {
