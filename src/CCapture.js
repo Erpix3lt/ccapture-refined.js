@@ -921,7 +921,7 @@ function CCapture( settings ) {
 				return false;
 			}
 		}
-		_log( 'saving' + JSON.stringify(_encoder) );
+		_log( 'saving' + _encoder );
 		_encoder.save( callback );
 	}
 
