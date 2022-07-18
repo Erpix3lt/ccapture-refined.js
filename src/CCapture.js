@@ -516,7 +516,7 @@ function CCGIFEncoder( settings ) {
 
   	this.encoder = new GIF({
 		workers: settings.workers,
-		quality: 30,
+		quality: 10,
 		workerScript: settings.workersPath + 'gif.worker.js',
 		transparent: settings.colorToIgnor
 	} );
