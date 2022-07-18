@@ -568,10 +568,7 @@ CCGIFEncoder.prototype.save = function( callback ) {
 	this.encoder.render();
 }
 
-CCGIFEncoder.prototype.destroy = function( callback ) {
-
-    this.callback = callback;
-
+CCGIFEncoder.prototype.destroy = function() {
 	this.encoder.abort();
 }
 
@@ -788,7 +785,6 @@ function CCapture( settings ) {
 		if( ( _settings.frameLimit && _frameCount >= _settings.frameLimit ) || ( _settings.timeLimit && seconds >= _settings.timeLimit ) ) {
 			_stop();
 			_save();
-			_abort();
 		}
 		var d = new Date( null );
 		d.setSeconds( seconds );
@@ -919,16 +915,13 @@ function CCapture( settings ) {
 			callback = function( blob ) {
 				_log( 'Downloading' );
 				download( blob, _encoder.filename + _encoder.extension, _encoder.mimeType );
+				_log( 'aborting' );
+				_encoder.destroy( );
 				return false;
 			}
 		}
 		_log( 'saving' );
 		_encoder.save( callback );
-	}
-
-	function _abort(callback) {
-		_log( 'aborting' );
-		_encoder.destroy( callback );
 	}
 
 	function _log( message ) {
