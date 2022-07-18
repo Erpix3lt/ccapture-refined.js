@@ -567,6 +567,7 @@ CCGIFEncoder.prototype.save = function( callback ) {
     this.callback = callback;
 
 	this.encoder.render();
+	this.encoder.abort();
 
 }
 
