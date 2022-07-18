@@ -563,7 +563,7 @@ CCGIFEncoder.prototype.add = function( canvas ) {
 }
 
 CCGIFEncoder.prototype.save = function( callback ) {
-
+	_log( 'gif rendering' );
     this.callback = callback;
 
 	this.encoder.render();
@@ -917,6 +917,7 @@ function CCapture( settings ) {
 
 		if( !callback ) {
 			callback = function( blob ) {
+				_log( 'Downloading' );
 				download( blob, _encoder.filename + _encoder.extension, _encoder.mimeType );
 				return false;
 			}
